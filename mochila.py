@@ -1,5 +1,4 @@
 from geneticmochila import *
-import random
 
 itensDisponiveis = [
     { "peso": 1,    "valor": 80     },
@@ -26,7 +25,7 @@ peso_max = 20
 p_count = 100
 
 #quantidade de gerações
-epochs = 300
+epochs = 3000
 
 #criar população
 p = population(p_count, itensDisponiveis)
@@ -35,6 +34,8 @@ p = population(p_count, itensDisponiveis)
 fitness_history = [media_fitness(p, itensDisponiveis, peso_max),]
 
 print (fitness_history)
+
+
 for i in range(epochs):
     p = evolve(p, itensDisponiveis, peso_max)
     fitness_history.append(media_fitness(p, itensDisponiveis, peso_max))
