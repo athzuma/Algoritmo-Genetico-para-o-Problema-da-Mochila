@@ -44,7 +44,7 @@ def evolve(pop, catalogo, target, mutate=0.01):
 
 
     #descobre quantos filhos terao que ser gerados
-    desired_length = len(catalogo)
+    desired_length = len(pop)
     children = []
     #comeca a gerar filhos
     while len(children) < desired_length:
